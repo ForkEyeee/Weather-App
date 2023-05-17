@@ -1,10 +1,12 @@
 import 'regenerator-runtime/runtime';
+import getUserInput from './getUserInput';
 
-async function fetchWeatherData(query) {
+async function fetchWeatherData() {
+  const { formInputValue } = getUserInput();
   let response;
   try {
     response = await fetch(
-      `https://api.weatherapi.com/v1/forecast.json?key=e4164860ed364899b8b214633231305&q=${query}&days=5`,
+      `https://api.weatherapi.com/v1/forecast.json?key=e4164860ed364899b8b214633231305&q=${formInputValue}&days=7`,
       { mode: 'cors' }
     );
     if (!response.ok) {
@@ -12,10 +14,11 @@ async function fetchWeatherData(query) {
     }
   } catch (error) {
     console.log(error);
+    alert('Please enter a valid location');
   }
+
   return response;
 }
-
 export default fetchWeatherData;
 
 // we want the current temp, current low and high, current humidity, and current windspeed,

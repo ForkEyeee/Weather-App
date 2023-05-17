@@ -1,4 +1,4 @@
 import './styles/main.css';
-import processWeatherData from './processWeatherData';
+import initializeEvents from './initializeEvents';
 
-processWeatherData()
+initializeEvents()
