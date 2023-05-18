@@ -1,11 +1,11 @@
 import fetchWeatherData from './fetchWeatherData';
 import getUserInput from './getUserInput';
 
-async function processWeatherData(event) {
+async function processWeatherData() {
   const { formInputValue } = getUserInput();
   let weatherData;
   if (formInputValue !== '') {
-    event.preventDefault();
+    // event.preventDefault();
     weatherData = await fetchWeatherData();
     weatherData = await weatherData.json();
     console.log(weatherData);
