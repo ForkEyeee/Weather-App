@@ -8,19 +8,22 @@
   </head>
   <body>
     <form method="get" id="submit-form">
-      <label for="location">Location</label>
-      <input type="text" name="location" id="input-location">
-      <button id="search-btn">Search</button>
+      <div class="form-controls">
+        <input
+          type="text"
+          name="location"
+          id="input-location"
+          placeholder="Enter a location"
+        />
+        <div class="temperature-switch"></div>
+        <button id="search-btn" type="submit">Search</button>
+        <button id="temp-toggle" class="btn" type="button">°F / °C</button>
+      </div>
     </form>
     <div id="main-container">
-      <div id="current-weather">XXXXXXXXXXXXXXX</div>
-      <div class="forecast-weather">HS7S8X7897AB</div>
-      <div class="forecast-weather">HS7S8X7897AB</div>
-      <div class="forecast-weather">HS7S8X7897AB</div>
-      <div class="forecast-weather">HS7S8X7897AB</div>
-      <div class="forecast-weather">HS7S8X7897AB</div>
-      <div class="forecast-weather">HS7S8X7897AB</div>
-      <div class="forecast-weather">HS7S8X7897AB</div>
+      <div id="current-weather">
+        <div id="current-item"></div>
+      </div>
     </div>
   </body>
 </html>

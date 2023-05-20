@@ -20,6 +20,3 @@ async function fetchWeatherData() {
   return response;
 }
 export default fetchWeatherData;
-
-// we want the current temp, current low and high, current humidity, and current windspeed,
-// we want average temp for each day of 7 forecast

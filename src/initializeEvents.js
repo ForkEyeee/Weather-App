@@ -1,10 +1,8 @@
-import processWeatherData from './processWeatherData';
 import getUserInput from './getUserInput';
 import insertWeatherData from './modifyDOM';
 
 const initializeEvents = () => {
   const { submitBtn } = getUserInput();
-  // submitBtn.addEventListener('click', processWeatherData);
   submitBtn.addEventListener('click', insertWeatherData);
 };
 
